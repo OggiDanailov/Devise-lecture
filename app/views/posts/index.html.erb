@@ -2,10 +2,11 @@
 
 <div class='post-list'>
 <% @posts.each do |p| %>
-<h4>Title:</h4>
+<h4 style='color: blue'>Title:</h4>
 <h5><%= p.title %></h5>
-<h4>Text</h4>
+<h4 style='color: blue'>Text</h4>
 <h5><%= p.body %></h5>
+<div style='text-align: center; color: teal'>******</div>
 
 <% end %>
 </div>

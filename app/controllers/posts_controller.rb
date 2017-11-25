@@ -1,16 +1,18 @@
 class PostsController < ApplicationController
   def index
-  	@posts = Post.all
+  	@posts = Post.all.order('created_at DESC')
   end
 
   def new
-  	@post = Post.new
+  	# @post = Post.new
+    @post = current_user.posts.build
   end
 
 
 
   def create
-  	@post = Post.new(post_params)
+  	# @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params )
   	if @post.save
   		redirect_to @post
   	else
@@ -30,7 +32,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
 
-    if @post.update(post_params)
+    if @post.update(post_params )
       redirect_to @post
     else
       render "edit" 

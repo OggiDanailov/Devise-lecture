@@ -6,6 +6,9 @@
 <h5><a href='/posts/<%=p.id %>'><%= p.title %></a></h5>
 <h4 style='color: black'>Text</h4>
 <h5><%= p.body %></h5>
+<br>
+<h5><%=p.created_at%></h5>
+<h5><%= p.user.email %></h5>
 <div style='text-align: center; color: teal'>******</div>
 
 <% end %>

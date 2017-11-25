@@ -2,9 +2,9 @@
 
 <div class='post-list'>
 <% @posts.each do |p| %>
-<h4 style='color: blue'>Title:</h4>
-<h5><%= link_to'<%= p.title %>', post_path %></h5>
-<h4 style='color: blue'>Text</h4>
+<h4 style='color: black' >Title:</h4>
+<h5><a href='/posts/<%=p.id %>'><%= p.title %></a></h5>
+<h4 style='color: black'>Text</h4>
 <h5><%= p.body %></h5>
 <div style='text-align: center; color: teal'>******</div>
 

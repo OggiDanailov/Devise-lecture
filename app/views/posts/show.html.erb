@@ -1,9 +1,30 @@
-<h1>My Post</h1>
-<%= @post.title %>
-<br>
-<%= @post.body %>
-<hr>
+<div class='show-post'>
+	<h1 style='text-align:center'>My Post</h1>
+	<h3>Post's Title</h3>
+	<%= @post.title %>
+	<br>
+	<h3>Post</h3>
+	<%= @post.body %>
+	<hr>
 
-<%= link_to 'Edit', edit_post_path %>
-<br>
-<%= link_to 'Delete Post', post_path, method: :delete, data: {confirm: 'are you super-duper sure???!?!'} %>
+	<div class='comment-place'>
+		<h4 style='text-align:center'>Number of Comments: <%= @post.comments.count %></h4>
+	<ul class='comments-table'>
+		<% @post.comments.each do |c| %>
+		<div class='comments'>
+			<li style='font-size: 21px'><%= c.comment %></li>
+			<li><%= c.user.email %></li>
+		</div>
+		<%end%>
+		<hr>
+		<h4 style='text-align:center'>Do you want to reply to this Post? To show how smart and original you are and the rest of the world doesn't get it at all?</h4>
+		<br>
+		<%= render 'comments/form' %>
+	</ul>
+	</div>
+	<br>
+</div>
+	<%= link_to 'Edit', edit_post_path %>
+
+	<br>
+	<%= link_to 'Delete Post', post_path, method: :delete, data: {confirm: 'are you super-duper sure???!?!'} %>

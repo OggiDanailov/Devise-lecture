@@ -9,16 +9,19 @@
 }
 
 .post-list {
-	border: 2px solid red;
+	border: 2px solid;
 	width: 40%;
 	margin: 0 auto;
 	background-color: salmon;
 	text-align: center;
+	border-radius: 15px;
 }
 
 .post-form {
+	border: 2px solid;
 	width: 50%;
 	margin: 10px auto;
 	background-color: teal;
 	padding: 10px;
+	border-radius: 15px;
 }

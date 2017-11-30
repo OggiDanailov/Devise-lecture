@@ -5,9 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'therubyracer', :platforms => :ruby
+gem 'execjs'
 gem "paperclip"
 gem 'devise'
-gem 'rails', '~> 5.0.6'
+gem 'rails', '~> 5.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

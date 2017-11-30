@@ -194,7 +194,7 @@ DEPENDENCIES
   paperclip
   pg
   puma (~> 3.0)
-  rails (~> 5.0.6)
+  rails
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)

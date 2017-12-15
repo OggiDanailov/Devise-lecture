@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'paperclip'
-
+gem 'rails-ujs', '~> 0.1.0'
 gem 'devise'
 gem 'rails'
 # Use sqlite3 as the database for Active Record
